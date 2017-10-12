@@ -15,5 +15,6 @@ The REST endpoint is on /showRss
 
 1. Open terminal on /App/FlipletApp
 2. On the file /www/js/rssLoader.js on the line 4, the ip address must be changed to the computer ip address
-2. run cordova platform add android
-3. run cordova emulate android
+3. run npm install
+4. run cordova platform add android
+5. run cordova emulate android

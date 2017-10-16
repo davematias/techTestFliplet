@@ -1,7 +1,7 @@
 //class responsible for loading rss data from the backend
 
 function RssLoader() {
-    this.backendUrl = "http://192.168.1.122:3000/showRss?rss_url=";
+    //this.backendUrl = "http://192.168.1.122:3000/showRss?rss_url=";
 }
 
 //loads the rss and prints it to the console
@@ -33,9 +33,11 @@ RssLoader.prototype.printRssToConsole = function(url){
 //loads the rss with ajax and returns the data or error
 RssLoader.prototype.loadRss = function(url, callback){
 
+    var storage = window.localStorage;
+    var value = storage.getItem(GLOBAL_STORAGE_SERVERURL);
 
     $.ajax({
-        url: this.backendUrl + url,
+        url: value + "/showRss?rss_url=" + url,
         method: 'GET',
         dataType: 'json'
     }).done(function (response) {

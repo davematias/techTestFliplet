@@ -16,6 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+//Global variables
+
+const GLOBAL_STORAGE_SERVERURL = "ST_SERVER";
+
 var app = {
     
     // Application Constructor
